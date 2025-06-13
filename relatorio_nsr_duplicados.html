@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Leitor de NSR Duplicados - Minimalista Dark</title>
+<link rel="stylesheet" href="style/syle.css">
+
+</head>
+<body>
+  <div class="container" role="main">
+    <h1>Leitor de NSR Duplicados</h1>
+
+    <!-- Botão customizado para upload -->
+    <label for="fileInput" class="btn-file" id="btnFileLabel" tabindex="0" role="button" aria-label="Selecionar arquivo de registros">Selecionar arquivo</label>
+    <button id="btnExportCsv" disabled>Exportar CSV</button>
+    <input type="file" id="fileInput" accept=".txt" aria-hidden="true" />
+
+    <input type="text" id="filtro" placeholder="Filtrar por NSR ou ident_func..." autocomplete="off" disabled aria-label="Campo para filtrar os dados" />
+    
+    <table id="tabela" aria-label="Tabela de NSR duplicados">
+      <thead>
+        <tr>
+          <th data-key="nsr" tabindex="0" aria-sort="none">NSR</th>
+          <th data-key="total" tabindex="0" aria-sort="none">NSR Repetido</th>
+          <th data-key="ident_func" tabindex="0" aria-sort="none">CPF do Usuário</th>
+          <th data-key="count" tabindex="0" aria-sort="none">Ocorrências por CPF</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+<script src="/script/js.js"></script>
+</html>
